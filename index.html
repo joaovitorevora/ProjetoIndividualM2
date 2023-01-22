@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/CSS/style.css">
+    <title>Codificador</title>
+</head>
+
+<body>
+    <main>
+        <!-- imagem Cadeado -->
+        <div id="imagem"><img src="assets/img/security.png" id="img-security"></div>
+        <!-- div imagem celular -->
+        <div id="imgCel">
+            <!-- imagem icone apple -->
+            <figure id="img-apple">
+                <img src="assets/img/apple.png" id="apple">
+            </figure>
+            <!-- inicio formulario -->
+            <form class="form" name="formulario">
+
+                <label for="digite">Digite seu texto</label>
+                <input type="text" id="texto">
+                <!-- escolher o tipo de codificação -->
+                <label for="escolher"> Metódo desejado:
+                <br>
+                    <select id="escolha">
+                        <option value="nulo" id="nulo" disabled selected>Selecione opção</option>
+                        <option id="cifraC" value="cifraC">Cifra de César</option>
+                        <option id="base" value="base">Base64</option>
+                        </select>
+                </label>
+                <!-- fim escolha -->
+
+                <!-- resposta com display none -->
+                <div id="hide">
+                    <input type="number" id="number" default="0" min="1" value="1">
+                </div>
+
+                <br>
+                <!-- escolher opção de code ou decode -->
+                <input type="radio" name="r1" id="code" value="code">Codificar
+                <input type="radio" name="r1" id="decode" value="decode">Decodificar
+
+                <!-- resposta da code/decode -->
+                <p id="mensagem"></p>
+                
+                <!-- botão -->
+                <div class="botao">
+                    <button id="button" type="submit">
+                    </button>
+                </div>
+
+            </form>  
+        </div>    
+    </main>
+
+    
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
