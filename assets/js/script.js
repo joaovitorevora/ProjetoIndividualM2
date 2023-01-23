@@ -67,26 +67,50 @@ function cifra(rb, texto, number){
     var resultado = '';
 
     for(var i = 0; i < texto.length; i++) {
-        var letra = texto[i];
+    var letra = texto[i];
 //pega a quantidade de letras e para cada letra adiciona 1 em i
 //adiona na letra o texto referente ao numero de i que passou cada loop 
-        console.log(i)
-        console.log(letra);
+    console.log(rb)      
 //adiciona na variavel code, o codigo do caractere da letra om a função charcodeAt
-        var code = letra.charCodeAt();
-        console.log(code)
+    var code = letra.charCodeAt();
 //se for codificar, adiciona a variavel code o parametro numero
+    if (code >= 65 && code <= 90){
         if (rb == 'code') {
             code += number;
-            console.log(code)
+            if(code > 90){
+                code = ((code -90) +64)%26
+            }
         }
 //se nao ele subtrai 1
         else{
             code -= number;
+            if(code <65){
+                code = (91 - (65-code))%26
+            }
         }
+    }
+    if(code >= 97 && code <=122){
+        if (rb == 'code') {
+            code += number;
+            if(code > 122){
+                code = ((code - 122) +96)
+            }
+        }
+//se nao ele subtrai 1
+        else{
+            code -= number;
+            if(code <97){
+                code = 123 - (97-code)
+            }
+        }
+    }
 //retorna uma string do valor referente ao charcode
         resultado += String.fromCharCode(code);
     }
-//retorna resultado
+//retorna resultado evitando caracter especial
+    return resultado;
+}
+
+
     return resultado;
 }
