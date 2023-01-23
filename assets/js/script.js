@@ -110,7 +110,3 @@ function cifra(rb, texto, number){
 //retorna resultado evitando caracter especial
     return resultado;
 }
-
-
-    return resultado;
-}
