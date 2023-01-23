@@ -12,7 +12,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
 
-    background-image: url("assets/img/fundo.png");
+    background-image: url("../img/fundo.png");
     background-repeat: no-repeat;
 }
 /* alinhando divs na classe pai */
@@ -58,7 +58,7 @@ main {
     width: 610px;
     height: 610px;
 
-    background-image: url("assets/img/celular.png");
+    background-image: url("../img/celular.png");
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -131,7 +131,7 @@ main {
         width: 610px;
         height: 610px;
 
-        background-image: url("assets/img/celular.png");
+        background-image: url("../img/celular.png");
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
