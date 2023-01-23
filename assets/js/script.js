@@ -60,3 +60,33 @@ function base(r1, texto){
     }
 }
 
+/*CIFRA DE CÉSAR*/
+function cifra(rb, texto, number){
+    number = Number(number);
+//deixa o resultado em branco
+    var resultado = '';
+
+    for(var i = 0; i < texto.length; i++) {
+        var letra = texto[i];
+//pega a quantidade de letras e para cada letra adiciona 1 em i
+//adiona na letra o texto referente ao numero de i que passou cada loop 
+        console.log(i)
+        console.log(letra);
+//adiciona na variavel code, o codigo do caractere da letra om a função charcodeAt
+        var code = letra.charCodeAt();
+        console.log(code)
+//se for codificar, adiciona a variavel code o parametro numero
+        if (rb == 'code') {
+            code += number;
+            console.log(code)
+        }
+//se nao ele subtrai 1
+        else{
+            code -= number;
+        }
+//retorna uma string do valor referente ao charcode
+        resultado += String.fromCharCode(code);
+    }
+//retorna resultado
+    return resultado;
+}
